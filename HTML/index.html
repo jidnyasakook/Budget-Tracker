@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<div class="logo">
+    <div class="coin"></div>
+    <span>FinTrack Student</span>
+</div>
+<title>Budget Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+<div class="container">
+
+<h1>📊 Budget Tracker</h1>
+
+<div class="card">
+
+<h3>Add Expense</h3>
+
+<form id="expenseForm">
+
+<input type="date" id="date" required>
+
+<input type="text" id="category" placeholder="Enter Category (Food, Travel, Books etc)" required>
+
+<input type="number" id="amount" placeholder="Amount ₹" required>
+
+<input type="text" id="notes" placeholder="Notes">
+
+<button type="submit">Add Expense</button>
+
+</form>
+
+</div>
+
+
+<div class="card">
+
+<h3>Finance Dashboard</h3>
+
+<div class="dashboard">
+
+<div class="stat">
+<h4>Total Expenses</h4>
+<h2 id="total">0</h2>
+</div>
+
+<div class="stat">
+<h4>Budget</h4>
+<input id="budget" value="5000">
+</div>
+
+<div class="stat">
+<h4>Remaining</h4>
+<h2 id="remaining">5000</h2>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>Expense History</h3>
+
+<table id="expenseTable">
+
+<tr>
+<th>Date</th>
+<th>Category</th>
+<th>Amount</th>
+<th>Notes</th>
+<th>Delete</th>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="card">
+
+<button onclick="downloadExcel()">Download Expense Report</button>
+
+<button onclick="downloadTemplate()">Download Student Budget Sheet</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
